@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontSize": 20,
+		"terminal.integrated.fontSize": 20,
+		"editor.formatOnSave": true,
+		"python.formatting.provider": "black",
+		"editor.lineNumbers": "off",
+		// require wk-j.save-and-run extension
+		"saveAndRun.commands": [
+			{
+				"match": "\\.py",
+				// su bash "cmd": "clear; py ${file} && git commit -am working || git reset --hard",
+				// su Windows PowerShell:
+				"cmd": "clear; (py ${file}) -and (git commit -am working) -or (git reset --hard)",
+				"runIn": "terminal"
+			}
+		],
+		"workbench.panel.defaultLocation": "right"
+	},
+	// "editor.codeActionsOnSave": null
+}
